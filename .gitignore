@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /dist
+src/steps.css
+src/Steps.vue
 
 
 # local env files

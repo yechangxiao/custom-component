@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-    <Login />
+    <!-- <Login /> -->
+    <RbComponent />
   </div>
 </template>
 
 <script>
-import Login from './components/Login.vue'
+import RbComponent from './components/RbComponent.vue'
+// import Login from './components/Login.vue'
 
 export default {
   name: 'App',
   components: {
-    Login
+    RbComponent
+  },
+  data () {
+    return {
+    }
+  },
+  methods: {
   }
 }
 </script>
