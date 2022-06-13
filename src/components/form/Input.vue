@@ -21,6 +21,20 @@ export default {
   methods: {
     handleInput (event) {
       this.$emit('input', event.target.value)
+      const findParent = parent => {
+        while (parent) {
+          if (parent.$options.name === 'RbFormItem') {
+            break
+          } else {
+            parent = parent.$parent
+          }
+        }
+        return parent
+      }
+      const parent = findParent(this.$parent)
+      if (parent) {
+        parent.$emit('validate')
+      }
     }
   }
 }
